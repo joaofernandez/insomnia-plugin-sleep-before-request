@@ -44,7 +44,18 @@ module.exports.templateTags = [{
 }];
 
 module.exports.requestHooks = [
-    async () => {
-        await sleepFunction();
+    async (context) => {
+        const regex = /Will sleep \d+ms before making the Request/g;
+        
+        const headers = context.request.getHeaders();
+
+        let customHeader = headers.filter((header) => header.name.match(regex) !== null)
+        customHeader.forEach(customHeader => context.request.removeHeader(customHeader.name))
+
+        if (customHeader.length === 0) {
+            return
+        }
+        
+        await sleepFunction()
     }
 ];
