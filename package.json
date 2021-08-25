@@ -1,0 +1,15 @@
+{
+  "name": "insomnia-plugin-sleep-before-request",
+  "version": "1.0.0",
+  "description": "An Insomnia Plugin that forces a delay in milliseconds before making requests",
+  "main": "index.js",
+  "scripts": {
+  },
+  "insomnia": {
+    "name": "sleep-before-making-request",
+    "displayName": "Sleep before making a request",
+    "description": "An Insomnia Plugin that forces a delay in milliseconds before making requests"
+  },
+  "author": "João Fernandez & Gabriel Pivetti",
+  "license": "ISC"
+}
