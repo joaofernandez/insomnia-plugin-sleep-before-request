@@ -1,6 +1,6 @@
 {
   "name": "insomnia-plugin-sleep-before-request",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An Insomnia Plugin that forces a delay in milliseconds before making requests",
   "main": "index.js",
   "scripts": {},
